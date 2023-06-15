@@ -8,8 +8,8 @@ arguments
   nvpairs.MaxPower_kW (1,1) double {mustBePositive} = 220;
 
   nvpairs.Efficiency_pct (1,1) double {mustBePositive} = 95;
-  nvpairs.Speed_measured_rpm (1,1) double {mustBeNonnegative} = 2000;
-  nvpairs.Torque_measured_Nm (1,1) double {mustBeNonnegative} = 50;
+  nvpairs.Speed_measured_rpm %(1,1) double {mustBeNonnegative} = 2000;
+  nvpairs.Torque_measured_Nm %(1,1) double {mustBeNonnegative} = 50;
 
   % Motor & Drive block from Simscape Driveline does not include rotational damping,
   % but the Motor Drive Unit model can have a damping block in addition to

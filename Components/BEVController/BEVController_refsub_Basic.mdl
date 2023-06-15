@@ -19,6 +19,7 @@ __MWOPC_PART_BEGIN__ /[Content_Types].xml
   <Override ContentType="application/vnd.mathworks.simulink.hdlparams+xml" PartName="/simulink/hdlParams.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.mf0+xml" PartName="/simulink/modelDictionary.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.modelMask+xml" PartName="/simulink/modelMask.xml"/>
+  <Override ContentType="application/vnd.mathworks.stateflow.chart+xml" PartName="/simulink/stateflow/chart_16.xml"/>
   <Override ContentType="application/vnd.mathworks.stateflow.chart+xml" PartName="/simulink/stateflow/chart_9.xml"/>
   <Override ContentType="application/vnd.mathworks.stateflow.machine+xml" PartName="/simulink/stateflow/machine.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.blockDiagram+xml" PartName="/simulink/windowsInfo.xml"/>
@@ -45,8 +46,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2023-02-09T16:48:39Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>tu101</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-06-08T11:00:31Z</dcterms:modified>
-  <cp:revision>2.60</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-06-15T03:31:25Z</dcterms:modified>
+  <cp:revision>2.64</cp:revision>
   <cp:version>R2023a</cp:version>
 </cp:coreProperties>
 
@@ -117,7 +118,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:2.60&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:2.64&gt;</P>
     </ConfigManagerSettings>
     <SimulationSettings>
       <P Name="SimulationMode">normal</P>
@@ -134,7 +135,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
       <Object PropName="InstrumentedSignals" ObjectID="2" ClassName="Simulink.HMI.InstrumentedSignals">
         <Array PropName="Persistence" Type="Struct" Dimension="1*1">
           <MATStruct>
-            <Field Name="UUID" Class="char">0343bd0f-aff2-4ed9-be00-2735ebb35141</Field>
+            <Field Name="UUID" Class="char">0ef48571-b7bb-441a-8693-359a0aacba9b</Field>
             <Field Name="BlockPath_" Class="char">Speed Controller/Electrical Efficiency</Field>
             <Field Name="SID_" Class="char">55776</Field>
             <Field Name="SubPath_" Class="char"/>
@@ -1045,8 +1046,8 @@ __MWOPC_PART_BEGIN__ /simulink/hdlParams.xml
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
-  <System type="System" uuid="048f8942-9b97-4b03-9cf8-01ca1c8937e3">
-    <Interface type="Interface" uuid="27ff4125-8609-417e-a2b2-f8ce16ec86ee"/>
+  <System type="System" uuid="5962b171-9fc9-414a-95c1-032ec07ab9f5">
+    <Interface type="Interface" uuid="668dfada-6c1d-4e62-89fc-5ac8b011f997"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/modelMask.xml
@@ -1089,17 +1090,18 @@ plot([0, L], [blockHeight - L, blockHeight])
 __MWOPC_PART_BEGIN__ /simulink/stateflow/_rels/machine.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="chart_16" Target="chart_16.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
   <Relationship Id="chart_9" Target="chart_9.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
 </Relationships>
 
-__MWOPC_PART_BEGIN__ /simulink/stateflow/chart_9.xml
+__MWOPC_PART_BEGIN__ /simulink/stateflow/chart_16.xml
 <?xml version="1.0" encoding="utf-8"?>
-<chart id="9">
+<chart id="16">
   <P Name="name">Speed Controller/MATLAB Function</P>
   <P Name="windowPosition">[422 539.941 189 413]</P>
   <P Name="viewLimits">[0 156.75 0 153.75]</P>
   <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
-  <P Name="viewObj">9</P>
+  <P Name="viewObj">16</P>
   <subviewS/>
   <P Name="ssIdHighWaterMark">7</P>
   <P Name="decomposition">CLUSTER_CHART</P>
@@ -1115,7 +1117,7 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_9.xml
       <P Name="position">[18 64.5 118 66]</P>
       <P Name="fontSize">12</P>
       <P Name="superState">SUBCHART</P>
-      <P Name="subviewer">9</P>
+      <P Name="subviewer">16</P>
       <P Name="type">FUNC_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
       <eml>
@@ -1213,6 +1215,104 @@ reward = -100 * abs(reference - actual);</P>
       </dst>
       <P Name="midPoint">[23.5747 24.9468]</P>
       <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+      <P Name="subviewer">16</P>
+      <P Name="drawStyle">SMART</P>
+      <slide>
+        <P Name="sticky">BOTH_STICK</P>
+      </slide>
+      <P Name="executionOrder">1</P>
+    </transition>
+    <junction SSID="3">
+      <P Name="position">[23.5747 49.5747 7]</P>
+      <P Name="subviewer">16</P>
+      <P Name="type">CONNECTIVE_JUNCTION</P>
+    </junction>
+  </Children>
+</chart>
+
+__MWOPC_PART_BEGIN__ /simulink/stateflow/chart_9.xml
+<?xml version="1.0" encoding="utf-8"?>
+<chart id="9">
+  <P Name="name">Speed Controller/MATLAB Function1</P>
+  <P Name="windowPosition">[422 539.941 189 413]</P>
+  <P Name="viewLimits">[0 156.75 0 153.75]</P>
+  <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+  <P Name="viewObj">9</P>
+  <subviewS/>
+  <P Name="ssIdHighWaterMark">5</P>
+  <P Name="decomposition">CLUSTER_CHART</P>
+  <P Name="type">EML_CHART</P>
+  <P Name="chartFileNumber">1</P>
+  <P Name="disableImplicitCasting">1</P>
+  <eml>
+    <P Name="name">isDone</P>
+  </eml>
+  <Children>
+    <state SSID="1">
+      <P Name="labelString">eML_blk_kernel()</P>
+      <P Name="position">[18 64.5 118 66]</P>
+      <P Name="fontSize">12</P>
+      <P Name="superState">SUBCHART</P>
+      <P Name="subviewer">9</P>
+      <P Name="type">FUNC_STATE</P>
+      <P Name="decomposition">CLUSTER_STATE</P>
+      <eml>
+        <P Name="isEML">1</P>
+        <P Name="script">function res = isDone(Actual_Spd)
+
+
+res = (-100 &gt; Actual_Spd);
+</P>
+      </eml>
+    </state>
+    <data SSID="4" name="Actual_Spd">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="5" name="res">
+      <P Name="scope">OUTPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_NO</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <transition SSID="2">
+      <P Name="labelString">{eML_blk_kernel();}</P>
+      <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+      <P Name="fontSize">12</P>
+      <src>
+        <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+      </src>
+      <dst>
+        <P Name="SSID">3</P>
+        <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+      </dst>
+      <P Name="midPoint">[23.5747 24.9468]</P>
+      <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
       <P Name="subviewer">9</P>
       <P Name="drawStyle">SMART</P>
       <slide>
@@ -1234,16 +1334,22 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
   <machine id="8">
     <P Name="sfVersion">80000056</P>
     <Children>
-      <target id="18" name="sfun">
+      <target id="25" name="sfun">
         <P Name="description">Default Simulink S-Function Target.</P>
       </target>
       <chart Ref="chart_9"/>
+      <chart Ref="chart_16"/>
     </Children>
   </machine>
-  <instance id="17">
+  <instance id="15">
+    <P Name="machine">8</P>
+    <P Name="name">Speed Controller/MATLAB Function1</P>
+    <P Name="chart">9</P>
+  </instance>
+  <instance id="24">
     <P Name="machine">8</P>
     <P Name="name">Speed Controller/MATLAB Function</P>
-    <P Name="chart">9</P>
+    <P Name="chart">16</P>
   </instance>
 </Stateflow>
 
@@ -1252,6 +1358,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_24.xml.rels
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="system_55776" Target="system_55776.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_55817" Target="system_55817.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_55834" Target="system_55834.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
@@ -1264,7 +1371,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 __MWOPC_PART_BEGIN__ /simulink/systems/system_11.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[1720, 25, 3440, 1440]</P>
+  <P Name="Location">[-1, -7, 2049, 1105]</P>
   <Block BlockType="Inport" Name="VehSpd" SID="12">
     <P Name="Position">[260, 243, 290, 257]</P>
     <P Name="ZOrder">5719</P>
@@ -1395,8 +1502,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_11.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[1280, 0, 2560, 1032]</P>
-  <P Name="ZoomFactor">80</P>
+  <P Name="Location">[-1, -7, 2049, 1105]</P>
+  <P Name="ZoomFactor">75</P>
   <Block BlockType="Inport" Name="SpdRef" SID="25">
     <P Name="Position">[-475, 343, -445, 357]</P>
     <P Name="ZOrder">-2</P>
@@ -1409,23 +1516,10 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Inport" Name="Spd" SID="26">
-    <P Name="Position">[-475, 433, -445, 447]</P>
-    <P Name="ZOrder">-1</P>
-    <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
-    <P Name="Port">2</P>
-    <P Name="Unit">rpm</P>
-    <PortProperties>
-      <Port Type="out" Index="1">
-        <P Name="Name">Actual Speed (RPM)</P>
-        <P Name="PropagatedSignals">MotorSpd</P>
-      </Port>
-    </PortProperties>
-  </Block>
   <Block BlockType="Inport" Name="Battery Power" SID="55767">
-    <P Name="Position">[-465, 543, -435, 557]</P>
+    <P Name="Position">[-475, 543, -445, 557]</P>
     <P Name="ZOrder">500</P>
-    <P Name="Port">3</P>
+    <P Name="Port">2</P>
     <P Name="Unit">kW</P>
     <PortProperties>
       <Port Type="out" Index="1">
@@ -1433,19 +1527,67 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
       </Port>
     </PortProperties>
   </Block>
+  <Block BlockType="Inport" Name="In Bus Element" SID="55825">
+    <P Name="Position">[-465, 435, -455, 445]</P>
+    <P Name="ZOrder">26302</P>
+    <P Name="BackgroundColor">black</P>
+    <P Name="ShowName">off</P>
+    <P Name="Port">3</P>
+    <List ListType="InterfaceData">
+      <P Name="Version">0</P>
+      <P Name="PortNumber">3</P>
+      <P Name="PortName">Motor</P>
+      <P Name="Element">MotorSpd</P>
+      <P Name="PortBlockIndex">1</P>
+      <P Name="IsComposite">1</P>
+      <P Name="IsClientServer">0</P>
+    </List>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">Actual Speed (RPM)</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="In Bus Element1" SID="55827">
+    <P Name="Position">[1060, 400, 1070, 410]</P>
+    <P Name="ZOrder">26304</P>
+    <P Name="BackgroundColor">black</P>
+    <P Name="ShowName">off</P>
+    <P Name="Port">3</P>
+    <List ListType="InterfaceData">
+      <P Name="Version">0</P>
+      <P Name="PortNumber">3</P>
+      <P Name="PortName">Motor</P>
+      <P Name="Element">MotorElecPwr</P>
+      <P Name="PortBlockIndex">2</P>
+      <P Name="IsComposite">1</P>
+      <P Name="IsClientServer">0</P>
+    </List>
+  </Block>
+  <Block BlockType="Inport" Name="In Bus Element2" SID="55828">
+    <P Name="Position">[1060, 350, 1070, 360]</P>
+    <P Name="ZOrder">26305</P>
+    <P Name="BackgroundColor">black</P>
+    <P Name="ShowName">off</P>
+    <P Name="Port">3</P>
+    <List ListType="InterfaceData">
+      <P Name="Version">0</P>
+      <P Name="PortNumber">3</P>
+      <P Name="PortName">Motor</P>
+      <P Name="Element">MotorMechPwr</P>
+      <P Name="PortBlockIndex">3</P>
+      <P Name="IsComposite">1</P>
+      <P Name="IsClientServer">0</P>
+    </List>
+  </Block>
   <Block BlockType="Goto" Name=" " SID="55719">
     <P Name="Position">[125, 335, 225, 365]</P>
     <P Name="ZOrder">455</P>
     <P Name="GotoTag">Ref</P>
   </Block>
-  <Block BlockType="TransferFcn" Name="20Hz Lowpass Filter" SID="27">
-    <P Name="Position">[-155, 34, -15, 76]</P>
-    <P Name="ZOrder">-3</P>
-    <P Name="Denominator">[1/(2*pi*20) 1]</P>
-  </Block>
   <Block BlockType="Reference" Name="Agent" SID="55796">
     <PortCounts in="3" out="1"/>
-    <P Name="Position">[50, 850, 280, 1090]</P>
+    <P Name="Position">[30, 1057, 270, 1423]</P>
     <P Name="ZOrder">26273</P>
     <P Name="LibraryVersion">6.0</P>
     <P Name="SourceBlock">rllib/RL Agent</P>
@@ -1467,24 +1609,29 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
   </Block>
   <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="55818">
     <PortCounts in="2" out="1"/>
-    <P Name="Position">[-325, 1176, -320, 1209]</P>
+    <P Name="Position">[440, 716, 450, 774]</P>
     <P Name="ZOrder">26295</P>
     <P Name="Inputs">2</P>
     <P Name="DisplayOption">bar</P>
     <P Name="InheritFromInputs">on</P>
     <PortProperties>
       <Port Type="out" Index="1">
-        <P Name="Name">Ref Spd, Actual Spd</P>
+        <P Name="Name">Ref Spd, Actual Spd (RPM)</P>
       </Port>
     </PortProperties>
   </Block>
   <Block BlockType="BusCreator" Name="Bus&#xA;Creator2" SID="55816">
     <PortCounts in="4" out="1"/>
-    <P Name="Position">[-265, 800, -260, 975]</P>
+    <P Name="Position">[-285, 1030, -280, 1205]</P>
     <P Name="ZOrder">26293</P>
     <P Name="Inputs">4</P>
     <P Name="DisplayOption">bar</P>
     <P Name="InheritFromInputs">on</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="55831">
+    <P Name="Position">[1060, 435, 1090, 465]</P>
+    <P Name="ZOrder">26308</P>
+    <P Name="Value">100</P>
   </Block>
   <Block BlockType="Derivative" Name="Derivative" SID="55721">
     <P Name="Position">[-30, 380, 0, 410]</P>
@@ -1494,9 +1641,21 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     <P Name="Position">[-30, 485, 0, 515]</P>
     <P Name="ZOrder">26291</P>
   </Block>
+  <Block BlockType="Product" Name="Divide" SID="55829">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[1160, 367, 1190, 398]</P>
+    <P Name="ZOrder">26306</P>
+    <P Name="Inputs">*/</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide1" SID="55830">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[1265, 427, 1295, 458]</P>
+    <P Name="ZOrder">26307</P>
+    <P Name="Inputs">**</P>
+  </Block>
   <Block BlockType="SubSystem" Name="Electrical Efficiency" SID="55776">
     <PortCounts in="2" out="1"/>
-    <P Name="Position">[465, 428, 595, 537]</P>
+    <P Name="Position">[465, 323, 595, 432]</P>
     <P Name="ZOrder">26264</P>
     <P Name="ContentPreviewEnabled">on</P>
     <PortProperties>
@@ -1507,7 +1666,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     <System Ref="system_55776"/>
   </Block>
   <Block BlockType="From" Name="From" SID="55788">
-    <P Name="Position">[-480, 716, -405, 744]</P>
+    <P Name="Position">[-485, 791, -410, 819]</P>
     <P Name="ZOrder">26265</P>
     <P Name="GotoTag">Ref</P>
     <PortProperties>
@@ -1517,33 +1676,43 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From1" SID="55789">
-    <P Name="Position">[-480, 626, -405, 654]</P>
+    <P Name="Position">[-485, 701, -410, 729]</P>
     <P Name="ZOrder">26266</P>
     <P Name="GotoTag">Actual</P>
   </Block>
   <Block BlockType="From" Name="From10" SID="55805">
-    <P Name="Position">[-465, 1316, -385, 1344]</P>
+    <P Name="Position">[280, 851, 395, 879]</P>
     <P Name="ZOrder">26282</P>
-    <P Name="GotoTag">Efficiency</P>
+    <P Name="GotoTag">Electrical_Efficiency</P>
     <PortProperties>
       <Port Type="out" Index="1">
-        <P Name="Name">Efficiency</P>
+        <P Name="Name">Electrical_Efficiency (kWhr/100km)</P>
         <P Name="PropagatedSignals">Electrical Efficiency</P>
       </Port>
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From11" SID="55815">
-    <P Name="Position">[-470, 896, -410, 924]</P>
+    <P Name="Position">[-490, 1126, -430, 1154]</P>
     <P Name="ZOrder">26292</P>
     <P Name="GotoTag">Actual</P>
   </Block>
+  <Block BlockType="From" Name="From12" SID="55833">
+    <P Name="Position">[280, 911, 395, 939]</P>
+    <P Name="ZOrder">26310</P>
+    <P Name="GotoTag">Motor_Efficiency</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">Motor_Efficiency (%)</P>
+      </Port>
+    </PortProperties>
+  </Block>
   <Block BlockType="From" Name="From13" SID="55761">
-    <P Name="Position">[-470, 943, -400, 967]</P>
+    <P Name="Position">[-490, 1173, -420, 1197]</P>
     <P Name="ZOrder">497</P>
     <P Name="GotoTag">Actual_D</P>
   </Block>
   <Block BlockType="From" Name="From15" SID="55762">
-    <P Name="Position">[-470, 806, -400, 834]</P>
+    <P Name="Position">[-490, 1036, -420, 1064]</P>
     <P Name="ZOrder">494</P>
     <P Name="GotoTag">Ref</P>
     <PortProperties>
@@ -1553,17 +1722,17 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From16" SID="55763">
-    <P Name="Position">[-470, 853, -400, 877]</P>
+    <P Name="Position">[-490, 1083, -420, 1107]</P>
     <P Name="ZOrder">495</P>
     <P Name="GotoTag">Ref_D</P>
   </Block>
   <Block BlockType="From" Name="From2" SID="55790">
-    <P Name="Position">[280, 496, 370, 524]</P>
+    <P Name="Position">[280, 391, 370, 419]</P>
     <P Name="ZOrder">26267</P>
     <P Name="GotoTag">Actual</P>
   </Block>
   <Block BlockType="From" Name="From3" SID="55793">
-    <P Name="Position">[280, 441, 370, 469]</P>
+    <P Name="Position">[280, 336, 370, 364]</P>
     <P Name="ZOrder">26270</P>
     <P Name="GotoTag">Battery_Power</P>
     <PortProperties>
@@ -1573,9 +1742,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From4" SID="55795">
-    <P Name="Position">[-470, 1058, -400, 1082]</P>
+    <P Name="Position">[-490, 1257, -380, 1283]</P>
     <P Name="ZOrder">26272</P>
-    <P Name="GotoTag">Efficiency</P>
+    <P Name="GotoTag">Electrical_Efficiency</P>
     <PortProperties>
       <Port Type="out" Index="1">
         <P Name="PropagatedSignals">Electrical Efficiency</P>
@@ -1583,12 +1752,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From5" SID="55731">
-    <P Name="Position">[285, 336, 375, 364]</P>
+    <P Name="Position">[280, 481, 370, 509]</P>
     <P Name="ZOrder">467</P>
-    <P Name="GotoTag">PI_Torque</P>
+    <P Name="GotoTag">Action</P>
   </Block>
   <Block BlockType="From" Name="From6" SID="55800">
-    <P Name="Position">[-470, 1173, -400, 1197]</P>
+    <P Name="Position">[280, 718, 350, 742]</P>
     <P Name="ZOrder">26277</P>
     <P Name="GotoTag">Ref</P>
     <PortProperties>
@@ -1598,22 +1767,22 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     </PortProperties>
   </Block>
   <Block BlockType="From" Name="From7" SID="55819">
-    <P Name="Position">[-470, 1218, -400, 1242]</P>
+    <P Name="Position">[280, 748, 350, 772]</P>
     <P Name="ZOrder">26296</P>
     <P Name="GotoTag">Actual</P>
   </Block>
   <Block BlockType="From" Name="From8" SID="55822">
-    <P Name="Position">[320, 611, 385, 639]</P>
+    <P Name="Position">[280, 591, 370, 619]</P>
     <P Name="ZOrder">26299</P>
     <P Name="GotoTag">Output</P>
   </Block>
   <Block BlockType="From" Name="From9" SID="55823">
-    <P Name="Position">[-465, 1261, -400, 1289]</P>
+    <P Name="Position">[280, 791, 350, 819]</P>
     <P Name="ZOrder">26300</P>
     <P Name="GotoTag">Output</P>
     <PortProperties>
       <Port Type="out" Index="1">
-        <P Name="Name">Torque Command</P>
+        <P Name="Name">Torque Command (NM)</P>
       </Port>
     </PortProperties>
   </Block>
@@ -1633,7 +1802,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     <P Name="GotoTag">Actual_D</P>
   </Block>
   <Block BlockType="Goto" Name="Goto3" SID="55725">
-    <P Name="Position">[260, 715, 345, 745]</P>
+    <P Name="Position">[135, 790, 220, 820]</P>
     <P Name="ZOrder">461</P>
     <P Name="GotoTag">PI_Torque</P>
   </Block>
@@ -1643,33 +1812,38 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
     <P Name="GotoTag">Battery_Power</P>
   </Block>
   <Block BlockType="Goto" Name="Goto5" SID="55759">
-    <P Name="Position">[340, 957, 430, 983]</P>
+    <P Name="Position">[360, 1227, 450, 1253]</P>
     <P Name="ZOrder">493</P>
     <P Name="GotoTag">Action</P>
   </Block>
   <Block BlockType="Goto" Name="Goto6" SID="55794">
-    <P Name="Position">[730, 472, 815, 498]</P>
+    <P Name="Position">[730, 367, 865, 393]</P>
     <P Name="ZOrder">26271</P>
-    <P Name="GotoTag">Efficiency</P>
+    <P Name="GotoTag">Electrical_Efficiency</P>
   </Block>
   <Block BlockType="Goto" Name="Goto7" SID="55821">
-    <P Name="Position">[695, 335, 785, 365]</P>
+    <P Name="Position">[725, 480, 815, 510]</P>
     <P Name="ZOrder">26298</P>
     <P Name="GotoTag">Output</P>
   </Block>
+  <Block BlockType="Goto" Name="Goto8" SID="55832">
+    <P Name="Position">[1375, 430, 1485, 460]</P>
+    <P Name="ZOrder">26309</P>
+    <P Name="GotoTag">Motor_Efficiency</P>
+  </Block>
   <Block BlockType="Gain" Name="Ki" SID="28">
-    <P Name="Position">[-230, 626, -20, 684]</P>
+    <P Name="Position">[-270, 701, -60, 759]</P>
     <P Name="ZOrder">-4</P>
     <P Name="Gain">bevControl.MotorSpdRef_Ki</P>
   </Block>
   <Block BlockType="Gain" Name="Kp" SID="29">
-    <P Name="Position">[-230, 701, -20, 759]</P>
+    <P Name="Position">[-270, 776, -60, 834]</P>
     <P Name="ZOrder">-5</P>
     <P Name="Gain">bevControl.MotorSpdRef_Kp</P>
   </Block>
   <Block BlockType="Integrator" Name="Limits [-40,40]" SID="30">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[30, 640, 60, 670]</P>
+    <P Name="Position">[-15, 715, 15, 745]</P>
     <P Name="ZOrder">-6</P>
     <P Name="LimitOutput">on</P>
     <P Name="UpperSaturationLimit">40</P>
@@ -1677,7 +1851,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_24.xml
   </Block>
   <Block BlockType="SubSystem" Name="MATLAB Function" SID="55817">
     <PortCounts in="3" out="1"/>
-    <P Name="Position">[-180, 993, -40, 1087]</P>
+    <P Name="Position">[-175, 1193, -35, 1287]</P>
     <P Name="ZOrder">26294</P>
     <P Name="LibrarySourceBlock">simulink/User-Defined
 Functions/MATLAB Function</P>
@@ -1693,8 +1867,26 @@ Functions/MATLAB Function</P>
     </PortProperties>
     <System Ref="system_55817"/>
   </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function1" SID="55834">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-175, 1324, -35, 1396]</P>
+    <P Name="ZOrder">26311</P>
+    <P Name="LibrarySourceBlock">simulink/User-Defined
+Functions/MATLAB Function</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">res</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_55834"/>
+  </Block>
   <Block BlockType="Saturate" Name="Saturation1" SID="55732">
-    <P Name="Position">[465, 335, 495, 365]</P>
+    <P Name="Position">[530, 480, 560, 510]</P>
     <P Name="ZOrder">468</P>
     <P Name="HideAutomaticName">off</P>
     <P Name="AttributesFormatString">%&lt;UpperLimit&gt;
@@ -1703,38 +1895,31 @@ Functions/MATLAB Function</P>
     <P Name="LowerLimit">-bevControl.MotorDriveUnit_trqMax_Nm</P>
   </Block>
   <Block BlockType="Scope" Name="Scope" SID="55809">
-    <PortCounts in="3"/>
-    <P Name="Position">[245, 1166, 380, 1344]</P>
+    <PortCounts in="4"/>
+    <P Name="Position">[715, 710, 955, 960]</P>
     <P Name="ZOrder">26286</P>
     <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg</P>
-    <P Name="NumInputPorts">3</P>
+    <P Name="NumInputPorts">4</P>
     <P Name="Floating">off</P>
   </Block>
   <Block BlockType="Scope" Name="Scope1" SID="55810">
     <PortCounts in="1"/>
-    <P Name="Position">[350, 1424, 380, 1456]</P>
+    <P Name="Position">[595, 689, 625, 721]</P>
     <P Name="ZOrder">26287</P>
     <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg</P>
     <P Name="NumInputPorts">1</P>
     <P Name="Floating">off</P>
   </Block>
-  <Block BlockType="Scope" Name="Scope2" SID="55820">
-    <PortCounts in="1"/>
-    <P Name="Position">[370, 1029, 400, 1061]</P>
-    <P Name="ZOrder">26297</P>
-    <P Name="NumInputPorts">1</P>
-    <P Name="Floating">off</P>
-  </Block>
   <Block BlockType="Sum" Name="Sum" SID="32">
     <PortCounts in="2" out="1"/>
-    <P Name="Position">[-315, 720, -295, 740]</P>
+    <P Name="Position">[-355, 795, -335, 815]</P>
     <P Name="ZOrder">-7</P>
     <P Name="ShowName">off</P>
     <P Name="Inputs">-+|</P>
   </Block>
   <Block BlockType="Sum" Name="Sum1" SID="33">
     <PortCounts in="2" out="1"/>
-    <P Name="Position">[100, 720, 120, 740]</P>
+    <P Name="Position">[45, 795, 65, 815]</P>
     <P Name="ZOrder">-8</P>
     <P Name="ShowName">off</P>
     <P Name="Inputs">++|</P>
@@ -1745,251 +1930,288 @@ Functions/MATLAB Function</P>
     <P Name="Denominator">[1/(2*pi*20) 1]</P>
   </Block>
   <Block BlockType="Outport" Name="TrqCmd" SID="34">
-    <P Name="Position">[465, 618, 495, 632]</P>
+    <P Name="Position">[785, 598, 815, 612]</P>
     <P Name="ZOrder">-10</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
     <P Name="Unit">N*m</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
   <Line>
-    <P Name="Name">Torque Command</P>
     <P Name="ZOrder">1</P>
+    <P Name="Src">55834#out:1</P>
+    <P Name="Dst">55796#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Motor_Efficiency (%)</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">55833#out:1</P>
+    <P Name="Dst">55809#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">Electrical_Efficiency (kWhr/100km)</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">55805#out:1</P>
+    <P Name="Dst">55809#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">55830#out:1</P>
+    <P Name="Dst">55832#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">55831#out:1</P>
+    <P Name="Dst">55830#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">55829#out:1</P>
+    <P Name="Points">[35, 0; 0, 50]</P>
+    <P Name="Dst">55830#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Labels">[3, 0]</P>
+    <P Name="Src">55828#out:1</P>
+    <P Name="Points">[35, 0; 0, 20]</P>
+    <P Name="Dst">55829#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">55827#out:1</P>
+    <P Name="Points">[35, 0; 0, -15]</P>
+    <P Name="Dst">55829#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">Torque Command (NM)</P>
+    <P Name="ZOrder">9</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">55823#out:1</P>
-    <P Name="Points">[498, 0; 0, -20]</P>
     <P Name="Dst">55809#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2</P>
+    <P Name="ZOrder">10</P>
     <P Name="Src">55822#out:1</P>
     <P Name="Dst">34#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">3</P>
+    <P Name="ZOrder">11</P>
     <P Name="Src">55819#out:1</P>
-    <P Name="Points">[32, 0; 0, -30]</P>
     <P Name="Dst">55818#in:2</P>
   </Line>
   <Line>
-    <P Name="Name">Ref Spd, Actual Spd</P>
-    <P Name="ZOrder">4</P>
-    <P Name="Labels">[1, 1]</P>
+    <P Name="Name">Ref Spd, Actual Spd (RPM)</P>
+    <P Name="ZOrder">12</P>
     <P Name="Src">55818#out:1</P>
-    <P Name="Points">[275, 0]</P>
+    <P Name="Points">[62, 0]</P>
     <Branch>
-      <P Name="ZOrder">5</P>
-      <P Name="Dst">55809#in:1</P>
+      <P Name="ZOrder">13</P>
+      <P Name="Points">[0, -40]</P>
+      <P Name="Dst">55810#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">6</P>
-      <P Name="Points">[0, 245]</P>
-      <P Name="Dst">55810#in:1</P>
+      <P Name="ZOrder">14</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Dst">55809#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">7</P>
+    <P Name="ZOrder">15</P>
     <P Name="Src">55800#out:1</P>
     <P Name="Dst">55818#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">8</P>
+    <P Name="ZOrder">16</P>
     <P Name="Src">55812#out:1</P>
     <P Name="Points">[31, 0]</P>
     <Branch>
-      <P Name="ZOrder">9</P>
+      <P Name="ZOrder">17</P>
       <P Name="Dst">55813#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">10</P>
+      <P Name="ZOrder">18</P>
       <P Name="Points">[0, 60]</P>
       <P Name="Dst">55814#in:1</P>
     </Branch>
   </Line>
   <Line>
     <P Name="Name">Actual Speed (RPM)</P>
-    <P Name="ZOrder">11</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">26#out:1</P>
+    <P Name="ZOrder">19</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">55825#out:1</P>
     <P Name="Dst">55812#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">Efficiency</P>
-    <P Name="ZOrder">12</P>
-    <P Name="Labels">[3, 1]</P>
-    <P Name="Src">55805#out:1</P>
-    <P Name="Points">[167, 0; 0, -15]</P>
-    <P Name="Dst">55809#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">13</P>
+    <P Name="ZOrder">20</P>
     <P Name="Src">55795#out:1</P>
     <P Name="Dst">55817#in:3</P>
   </Line>
   <Line>
     <P Name="Name">Electrical Efficiency</P>
-    <P Name="ZOrder">14</P>
+    <P Name="ZOrder">21</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">55776#out:1</P>
     <P Name="Dst">55794#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">15</P>
+    <P Name="ZOrder">22</P>
     <P Name="Src">55767#out:1</P>
     <P Name="Dst">55792#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">16</P>
+    <P Name="ZOrder">23</P>
     <P Name="Src">55790#out:1</P>
     <P Name="Dst">55776#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17</P>
+    <P Name="ZOrder">24</P>
     <P Name="Src">55789#out:1</P>
-    <P Name="Points">[95, 0]</P>
+    <P Name="Points">[60, 0]</P>
     <P Name="Dst">32#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">18</P>
+    <P Name="ZOrder">25</P>
     <P Name="Src">55788#out:1</P>
     <P Name="Dst">32#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">19</P>
+    <P Name="ZOrder">26</P>
     <P Name="Src">55793#out:1</P>
     <P Name="Dst">55776#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">20</P>
+    <P Name="ZOrder">27</P>
     <P Name="Src">55817#out:1</P>
-    <P Name="Points">[19, 0; 0, -70]</P>
     <P Name="Dst">55796#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">21</P>
+    <P Name="ZOrder">28</P>
     <P Name="Src">55816#out:1</P>
     <P Name="Dst">55796#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">22</P>
+    <P Name="ZOrder">29</P>
     <P Name="Src">55761#out:1</P>
     <P Name="Dst">55816#in:4</P>
   </Line>
   <Line>
-    <P Name="ZOrder">23</P>
+    <P Name="ZOrder">30</P>
     <P Name="Src">55815#out:1</P>
-    <P Name="Points">[73, 0]</P>
+    <P Name="Points">[76, 0]</P>
     <Branch>
-      <P Name="ZOrder">24</P>
+      <P Name="ZOrder">31</P>
+      <P Name="Points">[0, 100]</P>
+      <Branch>
+        <P Name="ZOrder">32</P>
+        <P Name="Dst">55817#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">33</P>
+        <P Name="Points">[0, 120]</P>
+        <P Name="Dst">55834#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">34</P>
       <P Name="Dst">55816#in:3</P>
     </Branch>
-    <Branch>
-      <P Name="ZOrder">25</P>
-      <P Name="Points">[0, 130]</P>
-      <P Name="Dst">55817#in:2</P>
-    </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">26</P>
+    <P Name="ZOrder">35</P>
     <P Name="Src">55762#out:1</P>
-    <P Name="Points">[30, 0]</P>
+    <P Name="Points">[34, 0]</P>
     <Branch>
-      <P Name="ZOrder">27</P>
-      <P Name="Dst">55816#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">28</P>
-      <P Name="Points">[0, 190]</P>
+      <P Name="ZOrder">36</P>
+      <P Name="Points">[0, 160]</P>
       <P Name="Dst">55817#in:1</P>
     </Branch>
+    <Branch>
+      <P Name="ZOrder">37</P>
+      <P Name="Dst">55816#in:1</P>
+    </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">29</P>
+    <P Name="ZOrder">38</P>
     <P Name="Src">55763#out:1</P>
     <P Name="Dst">55816#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">30</P>
+    <P Name="ZOrder">39</P>
     <P Name="Src">55796#out:1</P>
-    <P Name="Points">[18, 0]</P>
-    <Branch>
-      <P Name="ZOrder">31</P>
-      <P Name="Dst">55759#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">32</P>
-      <P Name="Points">[0, 75]</P>
-      <P Name="Dst">55820#in:1</P>
-    </Branch>
+    <P Name="Dst">55759#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">33</P>
+    <P Name="ZOrder">40</P>
     <P Name="Src">55732#out:1</P>
     <P Name="Dst">55821#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">34</P>
+    <P Name="ZOrder">41</P>
     <P Name="Src">55731#out:1</P>
     <P Name="Dst">55732#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">35</P>
+    <P Name="ZOrder">42</P>
     <P Name="Src">55814#out:1</P>
     <P Name="Dst">55724#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">36</P>
+    <P Name="ZOrder">43</P>
     <P Name="Src">55721#out:1</P>
     <P Name="Dst">55720#in:1</P>
   </Line>
   <Line>
     <P Name="Name">Reference Speed (RPM)</P>
-    <P Name="ZOrder">37</P>
+    <P Name="ZOrder">44</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">25#out:1</P>
     <P Name="Points">[289, 0]</P>
     <Branch>
-      <P Name="ZOrder">38</P>
+      <P Name="ZOrder">45</P>
       <P Name="Dst">55719#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">39</P>
+      <P Name="ZOrder">46</P>
       <P Name="Points">[0, 45]</P>
       <P Name="Dst">55721#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">40</P>
+    <P Name="ZOrder">47</P>
     <P Name="Src">33#out:1</P>
     <P Name="Dst">55725#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">41</P>
+    <P Name="ZOrder">48</P>
     <P Name="Src">32#out:1</P>
-    <P Name="Points">[20, 0]</P>
+    <P Name="Points">[21, 0]</P>
     <Branch>
-      <P Name="ZOrder">42</P>
+      <P Name="ZOrder">49</P>
       <P Name="Points">[0, -75]</P>
       <P Name="Dst">28#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">43</P>
+      <P Name="ZOrder">50</P>
       <P Name="Dst">29#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">44</P>
+    <P Name="ZOrder">51</P>
     <P Name="Src">28#out:1</P>
     <P Name="Dst">30#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">45</P>
+    <P Name="ZOrder">52</P>
     <P Name="Src">29#out:1</P>
     <P Name="Dst">33#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">46</P>
+    <P Name="ZOrder">53</P>
     <P Name="Src">30#out:1</P>
-    <P Name="Points">[45, 0]</P>
+    <P Name="Points">[35, 0]</P>
     <P Name="Dst">33#in:1</P>
   </Line>
 </System>
@@ -2229,12 +2451,78 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_55817.xml
   </Line>
 </System>
 
+__MWOPC_PART_BEGIN__ /simulink/systems/system_55834.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SIDHighWatermark">27</P>
+  <Block BlockType="Inport" Name="Actual_Spd" SID="55834::1">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="55834::26">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="55834::25">
+    <P Name="Tag">Stateflow S-Function 1</P>
+    <PortCounts in="1" out="2"/>
+    <P Name="Position">[180, 100, 230, 160]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="PortCounts">[1 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">on</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="Name">res</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="55834::27">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">18</P>
+  </Block>
+  <Block BlockType="Outport" Name="res" SID="55834::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">55834::25#out:1</P>
+    <P Name="Points">[16, 0; 0, 135]</P>
+    <P Name="Dst">55834::26#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">55834::26#out:1</P>
+    <P Name="Dst">55834::27#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">res</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">55834::25#out:2</P>
+    <P Name="Points">[121, 0; 0, -35]</P>
+    <P Name="Dst">55834::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">55834::1#out:1</P>
+    <P Name="Points">[65, 0; 0, 20]</P>
+    <P Name="Dst">55834::25#in:1</P>
+  </Line>
+</System>
+
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
   <P Name="Location">[16, 135, 1156, 775]</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">55823</P>
+  <P Name="SIDHighWatermark">55834</P>
   <Block BlockType="Inport" Name="VehSpdRef" SID="1">
     <P Name="Position">[-30, 63, 0, 77]</P>
     <P Name="ZOrder">26258</P>
@@ -2379,20 +2667,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="BusSelector" Name="Select 2" SID="23">
-    <PortCounts in="1" out="2"/>
-    <P Name="Position">[15, 141, 20, 219]</P>
-    <P Name="ZOrder">26269</P>
-    <P Name="OutputSignals">MotorSpd,MotorTemp</P>
-    <PortProperties>
-      <Port Type="out" Index="1">
-        <P Name="Name">&lt;MotorSpd&gt;</P>
-      </Port>
-      <Port Type="out" Index="2">
-        <P Name="Name">&lt;MotorTemp&gt;</P>
-      </Port>
-    </PortProperties>
-  </Block>
   <Block BlockType="BusSelector" Name="Select 3" SID="52351">
     <PortCounts in="1" out="2"/>
     <P Name="Position">[75, 320, 80, 400]</P>
@@ -2419,12 +2693,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     </PortProperties>
     <System Ref="system_24"/>
   </Block>
-  <Block BlockType="Terminator" Name="Terminator" SID="52352">
-    <P Name="Position">[130, 225, 150, 245]</P>
-    <P Name="ZOrder">26289</P>
-  </Block>
   <Block BlockType="Terminator" Name="Terminator1" SID="52353">
-    <P Name="Position">[145, 330, 165, 350]</P>
+    <P Name="Position">[155, 330, 175, 350]</P>
     <P Name="ZOrder">26290</P>
   </Block>
   <Block BlockType="Outport" Name="Info" SID="35">
@@ -2447,61 +2717,53 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Port">4</P>
   </Block>
   <Line>
-    <P Name="ZOrder">1713</P>
+    <P Name="ZOrder">1807</P>
     <P Name="Src">11#out:1</P>
     <P Name="Points">[41, 0]</P>
     <Branch>
-      <P Name="ZOrder">1712</P>
+      <P Name="ZOrder">1806</P>
       <P Name="Dst">10#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">1711</P>
+      <P Name="ZOrder">1805</P>
       <P Name="Points">[0, 45]</P>
       <P Name="Dst">24#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="Name">&lt;MotorSpd&gt;</P>
-    <P Name="ZOrder">1714</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">23#out:1</P>
-    <P Name="Points">[110, 0; 0, -5]</P>
-    <P Name="Dst">24#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">1715</P>
+    <P Name="ZOrder">1808</P>
     <P Name="Src">1#out:1</P>
     <P Name="Dst">11#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">1716</P>
+    <P Name="ZOrder">1809</P>
     <P Name="Src">4#out:1</P>
     <P Name="Dst">52358#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">1717</P>
+    <P Name="ZOrder">1810</P>
     <P Name="Src">2#out:1</P>
     <P Name="Points">[32, 0; 0, 60]</P>
     <P Name="Dst">22#in:1</P>
   </Line>
   <Line>
     <P Name="Name">&lt;Motor&gt;</P>
-    <P Name="ZOrder">1718</P>
+    <P Name="ZOrder">1811</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">22#out:1</P>
-    <P Name="Points">[17, 0; 0, -35]</P>
-    <P Name="Dst">23#in:1</P>
+    <P Name="Points">[148, 0; 0, -20]</P>
+    <P Name="Dst">24#in:3</P>
   </Line>
   <Line>
     <P Name="Name">MotorSpdRef</P>
-    <P Name="ZOrder">1719</P>
+    <P Name="ZOrder">1812</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">9#out:1</P>
     <P Name="Dst">5#in:1</P>
   </Line>
   <Line>
     <P Name="Name">Info</P>
-    <P Name="ZOrder">1720</P>
+    <P Name="ZOrder">1813</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">5#out:1</P>
     <P Name="Points">[90, 0]</P>
@@ -2509,7 +2771,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">Vehicle</P>
-    <P Name="ZOrder">1721</P>
+    <P Name="ZOrder">1814</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">6#out:1</P>
     <P Name="Points">[90, 0]</P>
@@ -2517,7 +2779,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">MotorDrive</P>
-    <P Name="ZOrder">1722</P>
+    <P Name="ZOrder">1815</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">7#out:1</P>
     <P Name="Points">[90, 0]</P>
@@ -2525,7 +2787,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">BatteryHV</P>
-    <P Name="ZOrder">1723</P>
+    <P Name="ZOrder">1816</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">8#out:1</P>
     <P Name="Points">[90, 0]</P>
@@ -2533,39 +2795,31 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">&lt;Battery&gt;</P>
-    <P Name="ZOrder">1724</P>
+    <P Name="ZOrder">1817</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">22#out:2</P>
     <P Name="Dst">52351#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">1725</P>
+    <P Name="ZOrder">1818</P>
     <P Name="Src">52338#out:1</P>
     <P Name="Dst">52355#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">1726</P>
+    <P Name="ZOrder">1819</P>
     <P Name="Src">52339#out:1</P>
     <P Name="Dst">52357#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">&lt;MotorTemp&gt;</P>
-    <P Name="ZOrder">1727</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">23#out:2</P>
-    <P Name="Points">[76, 0; 0, 35]</P>
-    <P Name="Dst">52352#in:1</P>
-  </Line>
-  <Line>
     <P Name="Name">&lt;Temp&gt;</P>
-    <P Name="ZOrder">1728</P>
-    <P Name="Labels">[0, 0]</P>
+    <P Name="ZOrder">1820</P>
+    <P Name="Labels">[-1, 1]</P>
     <P Name="Src">52351#out:1</P>
     <P Name="Dst">52353#in:1</P>
   </Line>
   <Line>
     <P Name="Name">HeatCmd</P>
-    <P Name="ZOrder">1729</P>
+    <P Name="ZOrder">1821</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">52355#out:1</P>
     <P Name="Points">[56, 0; 0, -20]</P>
@@ -2573,7 +2827,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">HeatCmd</P>
-    <P Name="ZOrder">1730</P>
+    <P Name="ZOrder">1822</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">52357#out:1</P>
     <P Name="Points">[-5, 0]</P>
@@ -2581,14 +2835,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">BrakeForce</P>
-    <P Name="ZOrder">1731</P>
+    <P Name="ZOrder">1823</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">52358#out:1</P>
     <P Name="Dst">6#in:1</P>
   </Line>
   <Line>
     <P Name="Name">TrqCmd</P>
-    <P Name="ZOrder">1732</P>
+    <P Name="ZOrder">1824</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">24#out:1</P>
     <P Name="Points">[158, 0; 0, -10]</P>
@@ -2596,11 +2850,11 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="Name">&lt;Power&gt;</P>
-    <P Name="ZOrder">1733</P>
-    <P Name="Labels">[0, 0]</P>
+    <P Name="ZOrder">1825</P>
+    <P Name="Labels">[1, 1]</P>
     <P Name="Src">52351#out:2</P>
-    <P Name="Points">[121, 0; 0, -185]</P>
-    <P Name="Dst">24#in:3</P>
+    <P Name="Points">[42, 0; 0, -225]</P>
+    <P Name="Dst">24#in:2</P>
   </Line>
 </System>
 
@@ -2663,7 +2917,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">2046061d-ef52-4cb6-823e-be880f0992b6</P>
     </Object>
-    <P Name="BDUuid" Class="char">428f7261-24cd-4829-97fe-d01f813519b7</P>
+    <P Name="BDUuid" Class="char">e5c0df3e-ccca-411f-85eb-0617c098185e</P>
   </Object>
 </WindowsInfo>
 

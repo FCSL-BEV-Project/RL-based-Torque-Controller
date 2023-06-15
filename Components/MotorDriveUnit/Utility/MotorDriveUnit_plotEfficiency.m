@@ -37,8 +37,8 @@ arguments
   nvpairs.MaxPower_kW (1,1) double {mustBePositive} = 53
 
   nvpairs.Efficiency_pct (1,1) double {mustBePositive} = 95
-  nvpairs.Speed_measured_rpm (1,1) double {mustBeNonnegative} = 2000
-  nvpairs.Torque_measured_Nm (1,1) double {mustBeNonnegative} = 50
+  nvpairs.Speed_measured_rpm %(1,1) double {mustBeNonnegative} = 2000
+  nvpairs.Torque_measured_Nm %(1,1) double {mustBeNonnegative} = 50
 
   % In Motor & Drive block from Simscape Driveline,
   % iron loss, constant electrical loss, and rotor friction are not modelled,
