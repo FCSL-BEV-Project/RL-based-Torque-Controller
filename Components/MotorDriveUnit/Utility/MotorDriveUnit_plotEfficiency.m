@@ -141,11 +141,11 @@ eff = valid_region_mat .* eff;
 fig = figure;  hold on
 contourf(w_rpm_vec, trq_Nm_vec, eff, contour_levels, ShowText="on")
 plot(w_rpm_vec, trq_max_envelope, LineWidth=3, Color="blue")
-sct = scatter(spd_eff_rpm, trq_eff_Nm, "x");
-sct.Marker = "x";
-sct.LineWidth = 1;
-sct.SizeData = 100;
-sct.MarkerEdgeColor = "black";
+% sct = scatter(spd_eff_rpm, trq_eff_Nm, "x");
+% sct.Marker = "x";
+% sct.LineWidth = 1;
+% sct.SizeData = 100;
+% sct.MarkerEdgeColor = "black";
 xlim([0 spd_max_rpm])
 ylim([0 trq_max_Nm])
 xlabel("Speed (rpm)")

@@ -40,4 +40,19 @@ MotorDriveUnit_plotEfficiency_Basic( ...
   ContourLevels_pct = [1 60 80 90 92 94 96 97 98 99], ...
   PlotResolution = 500 );
 
+load '../../../BEV/Simulation_Result/PI_Result_FTP72.mat';
+
+PI_Torque_Command = PI_Result.signals(2).values;
+PI_Torque_Command = abs(PI_Torque_Command);
+PI_Actual_Speed = PI_Result.signals(1).values(:,2);
+
+sct = scatter(PI_Actual_Speed, PI_Torque_Command, "x");
+sct.Marker = ".";
+sct.LineWidth = 0.5;
+sct.SizeData = 100;
+sct.MarkerEdgeColor = "red";
+
+title('PI Controller');
+
+
 
